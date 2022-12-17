@@ -3994,3 +3994,50 @@ Metric.OverallStatusInterval = 1
 
 #
 ###################################################################################################
+
+###################################################################################################
+# BOSS HISTORY / RAID INFO
+#
+#    BossHistory.Enable
+#        Description: Logging history/announcing a boss kill
+#        Default:     0 = Disable
+#                     1 = Enable
+
+BossHistory.Enable = 1
+
+#
+#     BossHistory.Mode
+#        Description: Enables logging only instance bosses
+#        Default:     0 - (WorldBoss, DungeonBoss and InstanceBoss)
+#                     1 - (InstanceBoss only)
+
+BossHistory.Mode = 0
+
+#
+#     BossHistory.Log
+#        Description: Enables logging a boss kill
+#        Default:     0 - (Disabled)
+#                     1 - (Enabled)
+
+BossHistory.Log = 0
+
+#
+#     RaidInfo.Announce
+#        Description: Enables announcing a kill boss by a guild, announced by raid info 
+#        Default:     0 - (Disabled)
+#                     1 - (Enabled)
+
+RaidInfo.Announce = 0
+
+#
+#     RaidInfo.Difficulty
+#        Description: Selects which difficulty or difficulties announces raid info
+#        Default:     0 - (10normal, 25normal, 10heroic, 25heroic)
+#                     1 - (25normal, 10heroic, 25heroic)
+#                     2 - (10heroic, 25heroic)
+#                     3 - (25heroic)
+
+RaidInfo.Difficulty = 0
+
+#
+###################################################################################################

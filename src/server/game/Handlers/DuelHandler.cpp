@@ -47,9 +47,16 @@ void WorldSession::HandleDuelAcceptedOpcode(WorldPacket& recvPacket)
     time_t now = GameTime::GetGameTime();
     player->duel->startTimer = now;
     plTarget->duel->startTimer = now;
-
+    // Reset CoolDown before DUEL
     player->SendDuelCountdown(3000);
     plTarget->SendDuelCountdown(3000);
+    // Reset CoolDown before DUEL
+    player->RemoveArenaSpellCooldowns();
+    plTarget->RemoveArenaSpellCooldowns();
+    player->SetHealth(player->GetMaxHealth());
+    player->SetPower(POWER_MANA, player->GetMaxPower(POWER_MANA));
+    plTarget->SetHealth(plTarget->GetMaxHealth());
+    plTarget->SetPower(POWER_MANA, plTarget->GetMaxPower(POWER_MANA));
 }
 
 void WorldSession::HandleDuelCancelledOpcode(WorldPacket& recvPacket)

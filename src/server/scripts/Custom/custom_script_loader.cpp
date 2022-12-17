@@ -16,10 +16,13 @@
  */
 
 // This is where scripts' loading functions should be declared:
-
+void AddSC_Mod_BossHistory();
+void AddSC_npc_promocion();
 
 // The name of this function should match:
 // void Add${NameOfDirectory}Scripts()
 void AddCustomScripts()
 {
+	AddSC_Mod_BossHistory();
+	AddSC_npc_promocion();
 }

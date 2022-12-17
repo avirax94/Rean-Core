@@ -794,6 +794,8 @@ void Creature::Update(uint32 diff)
 
                 i_AI->UpdateAI(diff);
                 m_AI_locked = false;
+                if (IsInCombat() && GetCreatureTemplate()->flags_extra & CREATURE_FLAG_EXTRA_INSTANCE_BIND)
+                     sScriptMgr->AllCreatureUpdateAI(diff);
             }
 
             // creature can be dead after UpdateAI call

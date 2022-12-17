@@ -1988,6 +1988,22 @@ void ScriptMgr::OnPlayerRepop(Player* player)
     FOREACH_SCRIPT(PlayerScript)->OnPlayerRepop(player);
 }
 
+// bossAnounce
+void ScriptMgr::AllCreatureJustDied(Creature* creature)
+{
+    FOREACH_SCRIPT(AllCreatureScript)->AllCreatureJustDied(creature);
+}
+
+void ScriptMgr::AllCreatureReset()
+{
+    FOREACH_SCRIPT(AllCreatureScript)->AllCreatureReset();
+}
+
+void ScriptMgr::AllCreatureUpdateAI(uint32 const diff)
+{
+    FOREACH_SCRIPT(AllCreatureScript)->AllCreatureUpdateAI(diff);
+}
+
 // Account
 void ScriptMgr::OnAccountLogin(uint32 accountId)
 {
@@ -2217,6 +2233,12 @@ CreatureScript::CreatureScript(char const* name)
     ScriptRegistry<CreatureScript>::Instance()->AddScript(this);
 }
 
+AllCreatureScript::AllCreatureScript(const char* name)
+    : ScriptObject(name)
+{
+    ScriptRegistry<AllCreatureScript>::Instance()->AddScript(this);
+}
+
 GameObjectScript::GameObjectScript(char const* name)
     : ScriptObject(name)
 {
@@ -2338,6 +2360,7 @@ template class TC_GAME_API ScriptRegistry<InstanceMapScript>;
 template class TC_GAME_API ScriptRegistry<BattlegroundMapScript>;
 template class TC_GAME_API ScriptRegistry<ItemScript>;
 template class TC_GAME_API ScriptRegistry<CreatureScript>;
+template class ScriptRegistry<AllCreatureScript>;
 template class TC_GAME_API ScriptRegistry<GameObjectScript>;
 template class TC_GAME_API ScriptRegistry<AreaTriggerScript>;
 template class TC_GAME_API ScriptRegistry<BattlegroundScript>;

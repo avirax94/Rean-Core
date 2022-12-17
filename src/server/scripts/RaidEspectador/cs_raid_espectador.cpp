@@ -68,6 +68,7 @@ public:
     static bool HandleREEntrarCommand(ChatHandler* handler, char const* args)
     {
         if (!*args)
+            handler->SendSysMessage("aki puedes poner las cosas que necesitas");
             return false;
 
         return true;
@@ -77,6 +78,7 @@ public:
     static bool HandleRESalidCommand(ChatHandler* handler, char const* args)
     {
         if (!*args)
+            handler->SendSysMessage("aki puedes poner las cosas que necesitas");
             return false;
 
         return true;
