@@ -15,13 +15,3 @@ Actualizaciones y novedades en twitter: http://twitter.com/ReanEmu
 Gracias a quienes hacen este proyecto posible y su respectivo crédito a:
 
 Copyright (C) TrinityCore (http://www.trinitycore.org)
-Copyright (C) Eilo (https://github.com/eilo)
-Copyright (C) Hispano (https://github.com/Hispano)
-Copyright (C) Muzashi (https://github.com/Muzashi)
-Copyright (C) Strolch (https://github.com/Strolch)
-Copyright (C) Oceanor (https://github.com/Oceanor)
-Copyright (C) Asleen (https://github.com/Asleen)
-Copyright (C) Gin (https://github.com/Gin88)
-Copyright (C) Eilo-Patches (https://github.com/eilo/Eilo-Patches)
-Copyright (C) ReanEmu (https://github.com/ComunidadRean/ReanEmu)
-Copyright (C) WoWReAn Emu (https://github.com/eilo/wowrean-emu)
